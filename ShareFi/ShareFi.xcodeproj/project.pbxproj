@@ -1,0 +1,581 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F40C4B1F1AF06568004199B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F40C4B1E1AF06568004199B3 /* main.m */; };
+		F40C4B221AF06568004199B3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F40C4B211AF06568004199B3 /* AppDelegate.m */; };
+		F40C4B251AF06568004199B3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F40C4B241AF06568004199B3 /* ViewController.m */; };
+		F40C4B281AF06568004199B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F40C4B261AF06568004199B3 /* Main.storyboard */; };
+		F40C4B2A1AF06568004199B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F40C4B291AF06568004199B3 /* Images.xcassets */; };
+		F40C4B2D1AF06568004199B3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F40C4B2B1AF06568004199B3 /* LaunchScreen.xib */; };
+		F40C4B391AF06569004199B3 /* ShareFiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F40C4B381AF06569004199B3 /* ShareFiTests.m */; };
+		F40C4B441AF06599004199B3 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F40C4B421AF06599004199B3 /* Bolts.framework */; };
+		F40C4B471AF065B7004199B3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F40C4B461AF065B7004199B3 /* AudioToolbox.framework */; };
+		F40C4B491AF065BE004199B3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F40C4B481AF065BE004199B3 /* CFNetwork.framework */; };
+		F40C4B4B1AF065C5004199B3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F40C4B4A1AF065C5004199B3 /* CoreGraphics.framework */; };
+		F40C4B4D1AF065CC004199B3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F40C4B4C1AF065CC004199B3 /* CoreLocation.framework */; };
+		F40C4B4F1AF065D2004199B3 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F40C4B4E1AF065D2004199B3 /* MobileCoreServices.framework */; };
+		F40C4B511AF065D7004199B3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F40C4B501AF065D7004199B3 /* QuartzCore.framework */; };
+		F40C4B531AF065DD004199B3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F40C4B521AF065DD004199B3 /* Security.framework */; };
+		F40C4B551AF065E4004199B3 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F40C4B541AF065E4004199B3 /* StoreKit.framework */; };
+		F40C4B571AF065EC004199B3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F40C4B561AF065EC004199B3 /* SystemConfiguration.framework */; };
+		F40C4B591AF065F4004199B3 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F40C4B581AF065F4004199B3 /* libz.dylib */; };
+		F40C4B5B1AF065FF004199B3 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F40C4B5A1AF065FF004199B3 /* libsqlite3.dylib */; };
+		F40C4B5D1AF06C15004199B3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F40C4B5C1AF06C15004199B3 /* Parse.framework */; };
+		F40C4B621AF06EDD004199B3 /* MyLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F40C4B5F1AF06EDD004199B3 /* MyLogInViewController.m */; };
+		F40C4B631AF06EDD004199B3 /* MySignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F40C4B611AF06EDD004199B3 /* MySignUpViewController.m */; };
+		F40C4B751AF07203004199B3 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F40C4B641AF07203004199B3 /* Icon.png */; };
+		F40C4B761AF07203004199B3 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F40C4B651AF07203004199B3 /* Icon@2x.png */; };
+		F40C4B771AF07203004199B3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F40C4B661AF07203004199B3 /* Default.png */; };
+		F40C4B781AF07203004199B3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F40C4B671AF07203004199B3 /* Default@2x.png */; };
+		F40C4B791AF07203004199B3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F40C4B681AF07203004199B3 /* Default-568h@2x.png */; };
+		F40C4B7A1AF07203004199B3 /* Exit.png in Resources */ = {isa = PBXBuildFile; fileRef = F40C4B691AF07203004199B3 /* Exit.png */; };
+		F40C4B7B1AF07203004199B3 /* ExitDown.png in Resources */ = {isa = PBXBuildFile; fileRef = F40C4B6A1AF07203004199B3 /* ExitDown.png */; };
+		F40C4B7C1AF07203004199B3 /* Facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = F40C4B6B1AF07203004199B3 /* Facebook.png */; };
+		F40C4B7D1AF07203004199B3 /* FacebookDown.png in Resources */ = {isa = PBXBuildFile; fileRef = F40C4B6C1AF07203004199B3 /* FacebookDown.png */; };
+		F40C4B7E1AF07203004199B3 /* LoginFieldBG.png in Resources */ = {isa = PBXBuildFile; fileRef = F40C4B6D1AF07203004199B3 /* LoginFieldBG.png */; };
+		F40C4B7F1AF07203004199B3 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F40C4B6E1AF07203004199B3 /* Logo.png */; };
+		F40C4B801AF07203004199B3 /* MainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = F40C4B6F1AF07203004199B3 /* MainBG.png */; };
+		F40C4B811AF07203004199B3 /* SignUp.png in Resources */ = {isa = PBXBuildFile; fileRef = F40C4B701AF07203004199B3 /* SignUp.png */; };
+		F40C4B821AF07203004199B3 /* SignUpDown.png in Resources */ = {isa = PBXBuildFile; fileRef = F40C4B711AF07203004199B3 /* SignUpDown.png */; };
+		F40C4B831AF07203004199B3 /* SignUpFieldBG.png in Resources */ = {isa = PBXBuildFile; fileRef = F40C4B721AF07203004199B3 /* SignUpFieldBG.png */; };
+		F40C4B841AF07203004199B3 /* Twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = F40C4B731AF07203004199B3 /* Twitter.png */; };
+		F40C4B851AF07203004199B3 /* TwitterDown.png in Resources */ = {isa = PBXBuildFile; fileRef = F40C4B741AF07203004199B3 /* TwitterDown.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F40C4B331AF06569004199B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F40C4B111AF06568004199B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F40C4B181AF06568004199B3;
+			remoteInfo = ShareFi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F40C4B191AF06568004199B3 /* ShareFi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareFi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F40C4B1D1AF06568004199B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F40C4B1E1AF06568004199B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F40C4B201AF06568004199B3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F40C4B211AF06568004199B3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F40C4B231AF06568004199B3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F40C4B241AF06568004199B3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F40C4B271AF06568004199B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F40C4B291AF06568004199B3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F40C4B2C1AF06568004199B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F40C4B321AF06569004199B3 /* ShareFiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShareFiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F40C4B371AF06569004199B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F40C4B381AF06569004199B3 /* ShareFiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareFiTests.m; sourceTree = "<group>"; };
+		F40C4B421AF06599004199B3 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		F40C4B461AF065B7004199B3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F40C4B481AF065BE004199B3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		F40C4B4A1AF065C5004199B3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F40C4B4C1AF065CC004199B3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F40C4B4E1AF065D2004199B3 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F40C4B501AF065D7004199B3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F40C4B521AF065DD004199B3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F40C4B541AF065E4004199B3 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		F40C4B561AF065EC004199B3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F40C4B581AF065F4004199B3 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		F40C4B5A1AF065FF004199B3 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		F40C4B5C1AF06C15004199B3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		F40C4B5E1AF06EDD004199B3 /* MyLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLogInViewController.h; sourceTree = "<group>"; };
+		F40C4B5F1AF06EDD004199B3 /* MyLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLogInViewController.m; sourceTree = "<group>"; };
+		F40C4B601AF06EDD004199B3 /* MySignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySignUpViewController.h; sourceTree = "<group>"; };
+		F40C4B611AF06EDD004199B3 /* MySignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySignUpViewController.m; sourceTree = "<group>"; };
+		F40C4B641AF07203004199B3 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		F40C4B651AF07203004199B3 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		F40C4B661AF07203004199B3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		F40C4B671AF07203004199B3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		F40C4B681AF07203004199B3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F40C4B691AF07203004199B3 /* Exit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Exit.png; sourceTree = "<group>"; };
+		F40C4B6A1AF07203004199B3 /* ExitDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ExitDown.png; sourceTree = "<group>"; };
+		F40C4B6B1AF07203004199B3 /* Facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Facebook.png; sourceTree = "<group>"; };
+		F40C4B6C1AF07203004199B3 /* FacebookDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FacebookDown.png; sourceTree = "<group>"; };
+		F40C4B6D1AF07203004199B3 /* LoginFieldBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginFieldBG.png; sourceTree = "<group>"; };
+		F40C4B6E1AF07203004199B3 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
+		F40C4B6F1AF07203004199B3 /* MainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainBG.png; sourceTree = "<group>"; };
+		F40C4B701AF07203004199B3 /* SignUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignUp.png; sourceTree = "<group>"; };
+		F40C4B711AF07203004199B3 /* SignUpDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignUpDown.png; sourceTree = "<group>"; };
+		F40C4B721AF07203004199B3 /* SignUpFieldBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignUpFieldBG.png; sourceTree = "<group>"; };
+		F40C4B731AF07203004199B3 /* Twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Twitter.png; sourceTree = "<group>"; };
+		F40C4B741AF07203004199B3 /* TwitterDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwitterDown.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F40C4B161AF06568004199B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F40C4B5B1AF065FF004199B3 /* libsqlite3.dylib in Frameworks */,
+				F40C4B591AF065F4004199B3 /* libz.dylib in Frameworks */,
+				F40C4B571AF065EC004199B3 /* SystemConfiguration.framework in Frameworks */,
+				F40C4B551AF065E4004199B3 /* StoreKit.framework in Frameworks */,
+				F40C4B531AF065DD004199B3 /* Security.framework in Frameworks */,
+				F40C4B511AF065D7004199B3 /* QuartzCore.framework in Frameworks */,
+				F40C4B5D1AF06C15004199B3 /* Parse.framework in Frameworks */,
+				F40C4B4F1AF065D2004199B3 /* MobileCoreServices.framework in Frameworks */,
+				F40C4B4D1AF065CC004199B3 /* CoreLocation.framework in Frameworks */,
+				F40C4B4B1AF065C5004199B3 /* CoreGraphics.framework in Frameworks */,
+				F40C4B491AF065BE004199B3 /* CFNetwork.framework in Frameworks */,
+				F40C4B471AF065B7004199B3 /* AudioToolbox.framework in Frameworks */,
+				F40C4B441AF06599004199B3 /* Bolts.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F40C4B2F1AF06569004199B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F40C4B101AF06568004199B3 = {
+			isa = PBXGroup;
+			children = (
+				F40C4B861AF07217004199B3 /* Assets */,
+				F40C4B5A1AF065FF004199B3 /* libsqlite3.dylib */,
+				F40C4B581AF065F4004199B3 /* libz.dylib */,
+				F40C4B5C1AF06C15004199B3 /* Parse.framework */,
+				F40C4B561AF065EC004199B3 /* SystemConfiguration.framework */,
+				F40C4B541AF065E4004199B3 /* StoreKit.framework */,
+				F40C4B521AF065DD004199B3 /* Security.framework */,
+				F40C4B501AF065D7004199B3 /* QuartzCore.framework */,
+				F40C4B4E1AF065D2004199B3 /* MobileCoreServices.framework */,
+				F40C4B4C1AF065CC004199B3 /* CoreLocation.framework */,
+				F40C4B4A1AF065C5004199B3 /* CoreGraphics.framework */,
+				F40C4B481AF065BE004199B3 /* CFNetwork.framework */,
+				F40C4B461AF065B7004199B3 /* AudioToolbox.framework */,
+				F40C4B421AF06599004199B3 /* Bolts.framework */,
+				F40C4B1B1AF06568004199B3 /* ShareFi */,
+				F40C4B351AF06569004199B3 /* ShareFiTests */,
+				F40C4B1A1AF06568004199B3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F40C4B1A1AF06568004199B3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F40C4B191AF06568004199B3 /* ShareFi.app */,
+				F40C4B321AF06569004199B3 /* ShareFiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F40C4B1B1AF06568004199B3 /* ShareFi */ = {
+			isa = PBXGroup;
+			children = (
+				F40C4B5E1AF06EDD004199B3 /* MyLogInViewController.h */,
+				F40C4B5F1AF06EDD004199B3 /* MyLogInViewController.m */,
+				F40C4B601AF06EDD004199B3 /* MySignUpViewController.h */,
+				F40C4B611AF06EDD004199B3 /* MySignUpViewController.m */,
+				F40C4B201AF06568004199B3 /* AppDelegate.h */,
+				F40C4B211AF06568004199B3 /* AppDelegate.m */,
+				F40C4B231AF06568004199B3 /* ViewController.h */,
+				F40C4B241AF06568004199B3 /* ViewController.m */,
+				F40C4B261AF06568004199B3 /* Main.storyboard */,
+				F40C4B291AF06568004199B3 /* Images.xcassets */,
+				F40C4B2B1AF06568004199B3 /* LaunchScreen.xib */,
+				F40C4B1C1AF06568004199B3 /* Supporting Files */,
+			);
+			path = ShareFi;
+			sourceTree = "<group>";
+		};
+		F40C4B1C1AF06568004199B3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F40C4B1D1AF06568004199B3 /* Info.plist */,
+				F40C4B1E1AF06568004199B3 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F40C4B351AF06569004199B3 /* ShareFiTests */ = {
+			isa = PBXGroup;
+			children = (
+				F40C4B381AF06569004199B3 /* ShareFiTests.m */,
+				F40C4B361AF06569004199B3 /* Supporting Files */,
+			);
+			path = ShareFiTests;
+			sourceTree = "<group>";
+		};
+		F40C4B361AF06569004199B3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F40C4B371AF06569004199B3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F40C4B861AF07217004199B3 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F40C4B641AF07203004199B3 /* Icon.png */,
+				F40C4B651AF07203004199B3 /* Icon@2x.png */,
+				F40C4B661AF07203004199B3 /* Default.png */,
+				F40C4B671AF07203004199B3 /* Default@2x.png */,
+				F40C4B681AF07203004199B3 /* Default-568h@2x.png */,
+				F40C4B691AF07203004199B3 /* Exit.png */,
+				F40C4B6A1AF07203004199B3 /* ExitDown.png */,
+				F40C4B6B1AF07203004199B3 /* Facebook.png */,
+				F40C4B6C1AF07203004199B3 /* FacebookDown.png */,
+				F40C4B6D1AF07203004199B3 /* LoginFieldBG.png */,
+				F40C4B6E1AF07203004199B3 /* Logo.png */,
+				F40C4B6F1AF07203004199B3 /* MainBG.png */,
+				F40C4B701AF07203004199B3 /* SignUp.png */,
+				F40C4B711AF07203004199B3 /* SignUpDown.png */,
+				F40C4B721AF07203004199B3 /* SignUpFieldBG.png */,
+				F40C4B731AF07203004199B3 /* Twitter.png */,
+				F40C4B741AF07203004199B3 /* TwitterDown.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F40C4B181AF06568004199B3 /* ShareFi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F40C4B3C1AF06569004199B3 /* Build configuration list for PBXNativeTarget "ShareFi" */;
+			buildPhases = (
+				F40C4B151AF06568004199B3 /* Sources */,
+				F40C4B161AF06568004199B3 /* Frameworks */,
+				F40C4B171AF06568004199B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShareFi;
+			productName = ShareFi;
+			productReference = F40C4B191AF06568004199B3 /* ShareFi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F40C4B311AF06569004199B3 /* ShareFiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F40C4B3F1AF06569004199B3 /* Build configuration list for PBXNativeTarget "ShareFiTests" */;
+			buildPhases = (
+				F40C4B2E1AF06569004199B3 /* Sources */,
+				F40C4B2F1AF06569004199B3 /* Frameworks */,
+				F40C4B301AF06569004199B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F40C4B341AF06569004199B3 /* PBXTargetDependency */,
+			);
+			name = ShareFiTests;
+			productName = ShareFiTests;
+			productReference = F40C4B321AF06569004199B3 /* ShareFiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F40C4B111AF06568004199B3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Miles Bernhard";
+				TargetAttributes = {
+					F40C4B181AF06568004199B3 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					F40C4B311AF06569004199B3 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = F40C4B181AF06568004199B3;
+					};
+				};
+			};
+			buildConfigurationList = F40C4B141AF06568004199B3 /* Build configuration list for PBXProject "ShareFi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F40C4B101AF06568004199B3;
+			productRefGroup = F40C4B1A1AF06568004199B3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F40C4B181AF06568004199B3 /* ShareFi */,
+				F40C4B311AF06569004199B3 /* ShareFiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F40C4B171AF06568004199B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F40C4B7A1AF07203004199B3 /* Exit.png in Resources */,
+				F40C4B7B1AF07203004199B3 /* ExitDown.png in Resources */,
+				F40C4B7E1AF07203004199B3 /* LoginFieldBG.png in Resources */,
+				F40C4B811AF07203004199B3 /* SignUp.png in Resources */,
+				F40C4B751AF07203004199B3 /* Icon.png in Resources */,
+				F40C4B851AF07203004199B3 /* TwitterDown.png in Resources */,
+				F40C4B771AF07203004199B3 /* Default.png in Resources */,
+				F40C4B801AF07203004199B3 /* MainBG.png in Resources */,
+				F40C4B7C1AF07203004199B3 /* Facebook.png in Resources */,
+				F40C4B281AF06568004199B3 /* Main.storyboard in Resources */,
+				F40C4B831AF07203004199B3 /* SignUpFieldBG.png in Resources */,
+				F40C4B2D1AF06568004199B3 /* LaunchScreen.xib in Resources */,
+				F40C4B7F1AF07203004199B3 /* Logo.png in Resources */,
+				F40C4B2A1AF06568004199B3 /* Images.xcassets in Resources */,
+				F40C4B791AF07203004199B3 /* Default-568h@2x.png in Resources */,
+				F40C4B821AF07203004199B3 /* SignUpDown.png in Resources */,
+				F40C4B7D1AF07203004199B3 /* FacebookDown.png in Resources */,
+				F40C4B781AF07203004199B3 /* Default@2x.png in Resources */,
+				F40C4B841AF07203004199B3 /* Twitter.png in Resources */,
+				F40C4B761AF07203004199B3 /* Icon@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F40C4B301AF06569004199B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F40C4B151AF06568004199B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F40C4B621AF06EDD004199B3 /* MyLogInViewController.m in Sources */,
+				F40C4B251AF06568004199B3 /* ViewController.m in Sources */,
+				F40C4B221AF06568004199B3 /* AppDelegate.m in Sources */,
+				F40C4B631AF06EDD004199B3 /* MySignUpViewController.m in Sources */,
+				F40C4B1F1AF06568004199B3 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F40C4B2E1AF06569004199B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F40C4B391AF06569004199B3 /* ShareFiTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F40C4B341AF06569004199B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F40C4B181AF06568004199B3 /* ShareFi */;
+			targetProxy = F40C4B331AF06569004199B3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F40C4B261AF06568004199B3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F40C4B271AF06568004199B3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F40C4B2B1AF06568004199B3 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F40C4B2C1AF06568004199B3 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F40C4B3A1AF06569004199B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F40C4B3B1AF06569004199B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F40C4B3D1AF06569004199B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = ShareFi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F40C4B3E1AF06569004199B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = ShareFi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F40C4B401AF06569004199B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ShareFiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShareFi.app/ShareFi";
+			};
+			name = Debug;
+		};
+		F40C4B411AF06569004199B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ShareFiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShareFi.app/ShareFi";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F40C4B141AF06568004199B3 /* Build configuration list for PBXProject "ShareFi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F40C4B3A1AF06569004199B3 /* Debug */,
+				F40C4B3B1AF06569004199B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F40C4B3C1AF06569004199B3 /* Build configuration list for PBXNativeTarget "ShareFi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F40C4B3D1AF06569004199B3 /* Debug */,
+				F40C4B3E1AF06569004199B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F40C4B3F1AF06569004199B3 /* Build configuration list for PBXNativeTarget "ShareFiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F40C4B401AF06569004199B3 /* Debug */,
+				F40C4B411AF06569004199B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F40C4B111AF06568004199B3 /* Project object */;
+}
