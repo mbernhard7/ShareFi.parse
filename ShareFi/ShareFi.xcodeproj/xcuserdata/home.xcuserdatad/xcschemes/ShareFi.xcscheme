@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0510"
+   LastUpgradeVersion = "0630"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,24 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "09ABC06C13A1D52D009C3FCF"
-               BuildableName = "ParseStarterProject.app"
-               BlueprintName = "ParseStarterProject"
-               ReferencedContainer = "container:ParseStarterProject.xcodeproj">
+               BlueprintIdentifier = "F40C4B181AF06568004199B3"
+               BuildableName = "ShareFi.app"
+               BlueprintName = "ShareFi"
+               ReferencedContainer = "container:ShareFi.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F40C4B311AF06569004199B3"
+               BuildableName = "ShareFiTests.xctest"
+               BlueprintName = "ShareFiTests"
+               ReferencedContainer = "container:ShareFi.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,14 +42,24 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F40C4B311AF06569004199B3"
+               BuildableName = "ShareFiTests.xctest"
+               BlueprintName = "ShareFiTests"
+               ReferencedContainer = "container:ShareFi.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "09ABC06C13A1D52D009C3FCF"
-            BuildableName = "ParseStarterProject.app"
-            BlueprintName = "ParseStarterProject"
-            ReferencedContainer = "container:ParseStarterProject.xcodeproj">
+            BlueprintIdentifier = "F40C4B181AF06568004199B3"
+            BuildableName = "ShareFi.app"
+            BlueprintName = "ShareFi"
+            ReferencedContainer = "container:ShareFi.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -48,13 +72,14 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "09ABC06C13A1D52D009C3FCF"
-            BuildableName = "ParseStarterProject.app"
-            BlueprintName = "ParseStarterProject"
-            ReferencedContainer = "container:ParseStarterProject.xcodeproj">
+            BlueprintIdentifier = "F40C4B181AF06568004199B3"
+            BuildableName = "ShareFi.app"
+            BlueprintName = "ShareFi"
+            ReferencedContainer = "container:ShareFi.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -66,13 +91,14 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "09ABC06C13A1D52D009C3FCF"
-            BuildableName = "ParseStarterProject.app"
-            BlueprintName = "ParseStarterProject"
-            ReferencedContainer = "container:ParseStarterProject.xcodeproj">
+            BlueprintIdentifier = "F40C4B181AF06568004199B3"
+            BuildableName = "ShareFi.app"
+            BlueprintName = "ShareFi"
+            ReferencedContainer = "container:ShareFi.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
