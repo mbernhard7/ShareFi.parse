@@ -143,19 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				F40C4B861AF07217004199B3 /* Assets */,
-				F40C4B5A1AF065FF004199B3 /* libsqlite3.dylib */,
-				F40C4B581AF065F4004199B3 /* libz.dylib */,
-				F40C4B5C1AF06C15004199B3 /* Parse.framework */,
-				F40C4B561AF065EC004199B3 /* SystemConfiguration.framework */,
-				F40C4B541AF065E4004199B3 /* StoreKit.framework */,
-				F40C4B521AF065DD004199B3 /* Security.framework */,
-				F40C4B501AF065D7004199B3 /* QuartzCore.framework */,
-				F40C4B4E1AF065D2004199B3 /* MobileCoreServices.framework */,
-				F40C4B4C1AF065CC004199B3 /* CoreLocation.framework */,
-				F40C4B4A1AF065C5004199B3 /* CoreGraphics.framework */,
-				F40C4B481AF065BE004199B3 /* CFNetwork.framework */,
-				F40C4B461AF065B7004199B3 /* AudioToolbox.framework */,
-				F40C4B421AF06599004199B3 /* Bolts.framework */,
+				F40C4B8A1AF0959B004199B3 /* Frameworks */,
 				F40C4B1B1AF06568004199B3 /* ShareFi */,
 				F40C4B351AF06569004199B3 /* ShareFiTests */,
 				F40C4B1A1AF06568004199B3 /* Products */,
@@ -240,6 +228,26 @@
 			name = Assets;
 			sourceTree = "<group>";
 		};
+		F40C4B8A1AF0959B004199B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F40C4B5A1AF065FF004199B3 /* libsqlite3.dylib */,
+				F40C4B581AF065F4004199B3 /* libz.dylib */,
+				F40C4B5C1AF06C15004199B3 /* Parse.framework */,
+				F40C4B561AF065EC004199B3 /* SystemConfiguration.framework */,
+				F40C4B541AF065E4004199B3 /* StoreKit.framework */,
+				F40C4B521AF065DD004199B3 /* Security.framework */,
+				F40C4B501AF065D7004199B3 /* QuartzCore.framework */,
+				F40C4B4E1AF065D2004199B3 /* MobileCoreServices.framework */,
+				F40C4B4C1AF065CC004199B3 /* CoreLocation.framework */,
+				F40C4B4A1AF065C5004199B3 /* CoreGraphics.framework */,
+				F40C4B481AF065BE004199B3 /* CFNetwork.framework */,
+				F40C4B461AF065B7004199B3 /* AudioToolbox.framework */,
+				F40C4B421AF06599004199B3 /* Bolts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -289,6 +297,7 @@
 				TargetAttributes = {
 					F40C4B181AF06568004199B3 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = H748CUNQU5;
 					};
 					F40C4B311AF06569004199B3 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -489,6 +498,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -503,6 +513,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -566,6 +577,7 @@
 				F40C4B3E1AF06569004199B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F40C4B3F1AF06569004199B3 /* Build configuration list for PBXNativeTarget "ShareFiTests" */ = {
 			isa = XCConfigurationList;
@@ -574,6 +586,7 @@
 				F40C4B411AF06569004199B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -24,7 +24,6 @@
 }
 - (void) viewDidAppear:(BOOL)animated {
     if (![PFUser currentUser]) {
-        NSLog(@"not logged in");
         MyLogInViewController *logInViewController = [[MyLogInViewController alloc] init];
         logInViewController.delegate = self;
         logInViewController.facebookPermissions = @[@"friends_about_me"];
@@ -35,6 +34,9 @@
         logInViewController.signUpController = signUpViewController;
         [self presentViewController:logInViewController animated:YES completion:NULL];
         
+    }
+    else
+    {
     }
 
 }
@@ -94,6 +96,7 @@
 // Sent to the delegate when a PFUser is signed up.
 - (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
     [self dismissViewControllerAnimated:YES completion:NULL];
+
 }
 
 // Sent to the delegate when the sign up attempt fails.
