@@ -26,6 +26,11 @@
     PFACL *defaultACL = [PFACL ACL];
     [defaultACL setPublicReadAccess:YES];
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
+    if (![PFUser currentUser]) {
+        
+        return YES;
+    
+    }
     return YES;
 }
 

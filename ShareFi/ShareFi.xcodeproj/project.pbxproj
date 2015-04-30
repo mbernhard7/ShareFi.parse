@@ -27,8 +27,6 @@
 		F40C4B591AF065F4004199B3 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F40C4B581AF065F4004199B3 /* libz.dylib */; };
 		F40C4B5B1AF065FF004199B3 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F40C4B5A1AF065FF004199B3 /* libsqlite3.dylib */; };
 		F40C4B5D1AF06C15004199B3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F40C4B5C1AF06C15004199B3 /* Parse.framework */; };
-		F40C4B621AF06EDD004199B3 /* MyLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F40C4B5F1AF06EDD004199B3 /* MyLogInViewController.m */; };
-		F40C4B631AF06EDD004199B3 /* MySignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F40C4B611AF06EDD004199B3 /* MySignUpViewController.m */; };
 		F40C4B751AF07203004199B3 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F40C4B641AF07203004199B3 /* Icon.png */; };
 		F40C4B761AF07203004199B3 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F40C4B651AF07203004199B3 /* Icon@2x.png */; };
 		F40C4B771AF07203004199B3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F40C4B661AF07203004199B3 /* Default.png */; };
@@ -46,6 +44,9 @@
 		F40C4B831AF07203004199B3 /* SignUpFieldBG.png in Resources */ = {isa = PBXBuildFile; fileRef = F40C4B721AF07203004199B3 /* SignUpFieldBG.png */; };
 		F40C4B841AF07203004199B3 /* Twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = F40C4B731AF07203004199B3 /* Twitter.png */; };
 		F40C4B851AF07203004199B3 /* TwitterDown.png in Resources */ = {isa = PBXBuildFile; fileRef = F40C4B741AF07203004199B3 /* TwitterDown.png */; };
+		F4B6D2651AF1C7300057F640 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B6D2641AF1C7300057F640 /* LogInViewController.m */; };
+		F4B6D2681AF1C7440057F640 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B6D2671AF1C7440057F640 /* SignUpViewController.m */; };
+		F4B6D26B1AF1CB320057F640 /* setupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B6D26A1AF1CB320057F640 /* setupViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,10 +86,6 @@
 		F40C4B581AF065F4004199B3 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		F40C4B5A1AF065FF004199B3 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		F40C4B5C1AF06C15004199B3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		F40C4B5E1AF06EDD004199B3 /* MyLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLogInViewController.h; sourceTree = "<group>"; };
-		F40C4B5F1AF06EDD004199B3 /* MyLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLogInViewController.m; sourceTree = "<group>"; };
-		F40C4B601AF06EDD004199B3 /* MySignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySignUpViewController.h; sourceTree = "<group>"; };
-		F40C4B611AF06EDD004199B3 /* MySignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySignUpViewController.m; sourceTree = "<group>"; };
 		F40C4B641AF07203004199B3 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		F40C4B651AF07203004199B3 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		F40C4B661AF07203004199B3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -106,6 +103,12 @@
 		F40C4B721AF07203004199B3 /* SignUpFieldBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignUpFieldBG.png; sourceTree = "<group>"; };
 		F40C4B731AF07203004199B3 /* Twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Twitter.png; sourceTree = "<group>"; };
 		F40C4B741AF07203004199B3 /* TwitterDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwitterDown.png; sourceTree = "<group>"; };
+		F4B6D2631AF1C7300057F640 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
+		F4B6D2641AF1C7300057F640 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
+		F4B6D2661AF1C7440057F640 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		F4B6D2671AF1C7440057F640 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		F4B6D2691AF1CB320057F640 /* setupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = setupViewController.h; sourceTree = "<group>"; };
+		F4B6D26A1AF1CB320057F640 /* setupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = setupViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,15 +165,17 @@
 		F40C4B1B1AF06568004199B3 /* ShareFi */ = {
 			isa = PBXGroup;
 			children = (
-				F40C4B5E1AF06EDD004199B3 /* MyLogInViewController.h */,
-				F40C4B5F1AF06EDD004199B3 /* MyLogInViewController.m */,
-				F40C4B601AF06EDD004199B3 /* MySignUpViewController.h */,
-				F40C4B611AF06EDD004199B3 /* MySignUpViewController.m */,
+				F40C4B261AF06568004199B3 /* Main.storyboard */,
 				F40C4B201AF06568004199B3 /* AppDelegate.h */,
 				F40C4B211AF06568004199B3 /* AppDelegate.m */,
 				F40C4B231AF06568004199B3 /* ViewController.h */,
 				F40C4B241AF06568004199B3 /* ViewController.m */,
-				F40C4B261AF06568004199B3 /* Main.storyboard */,
+				F4B6D2691AF1CB320057F640 /* setupViewController.h */,
+				F4B6D26A1AF1CB320057F640 /* setupViewController.m */,
+				F4B6D2631AF1C7300057F640 /* LogInViewController.h */,
+				F4B6D2641AF1C7300057F640 /* LogInViewController.m */,
+				F4B6D2661AF1C7440057F640 /* SignUpViewController.h */,
+				F4B6D2671AF1C7440057F640 /* SignUpViewController.m */,
 				F40C4B291AF06568004199B3 /* Images.xcassets */,
 				F40C4B2B1AF06568004199B3 /* LaunchScreen.xib */,
 				F40C4B1C1AF06568004199B3 /* Supporting Files */,
@@ -366,10 +371,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F40C4B621AF06EDD004199B3 /* MyLogInViewController.m in Sources */,
 				F40C4B251AF06568004199B3 /* ViewController.m in Sources */,
+				F4B6D2651AF1C7300057F640 /* LogInViewController.m in Sources */,
 				F40C4B221AF06568004199B3 /* AppDelegate.m in Sources */,
-				F40C4B631AF06EDD004199B3 /* MySignUpViewController.m in Sources */,
+				F4B6D2681AF1C7440057F640 /* SignUpViewController.m in Sources */,
+				F4B6D26B1AF1CB320057F640 /* setupViewController.m in Sources */,
 				F40C4B1F1AF06568004199B3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

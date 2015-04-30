@@ -9,8 +9,9 @@
 #import <Parse/Parse.h>
 
 
-@interface ViewController : UIViewController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
+@interface ViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *logOut;
 
 @end
 
