@@ -7,12 +7,21 @@
 //
 
 #import "CustomTableViewCell.h"
+#import "tableViewController.h"
 
 @implementation CustomTableViewCell
 @synthesize ssidLabel = _ssidLabel;
 @synthesize passLabel = _passLabel;
-@synthesize flagButton = _flagButton;
-@synthesize settingsButton = _settingsButton;
+@synthesize distLabel = _distLabel;
+
+- (IBAction)settingsButton:(id)sender {
+}
+- (IBAction)flagButton:(id)sender {
+}
+- (IBAction)mapsButton:(id)sender {
+  
+}
+
 - (void)awakeFromNib {
     // Initialization code
 }

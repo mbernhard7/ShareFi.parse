@@ -64,9 +64,21 @@
     if (cell == nil) {
         cell = [[CustomTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
+    self.locationManager = [[CLLocationManager alloc]init];
+    self.locationManager.distanceFilter = kCLDistanceFilterNone;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [self.locationManager startUpdatingLocation];
+    PFGeoPoint *userGeoPoint = [PFGeoPoint geoPointWithLatitude:self.locationManager.location.coordinate.latitude longitude:self.locationManager.location.coordinate.longitude];
+    double distance =[[object objectForKey:@"location"]distanceInMilesTo:userGeoPoint];
     cell.ssidLabel.text = [object objectForKey:@"ssid"];
     cell.passLabel.text =[object objectForKey:@"pass"];
-       
+    if (distance<1) {
+        distance=(distance*5280);
+    cell.distLabel.text =[NSString stringWithFormat:@"%g feet",distance];
+    }
+    else{
+        cell.distLabel.text =[NSString stringWithFormat:@"%g miles",distance];
+    }
     return cell;
 }
 /*

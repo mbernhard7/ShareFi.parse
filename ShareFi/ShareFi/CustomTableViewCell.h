@@ -11,7 +11,6 @@
 @interface CustomTableViewCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UILabel *ssidLabel;
 @property (strong, nonatomic) IBOutlet UILabel *passLabel;
-@property (strong, nonatomic) IBOutlet UIButton *flagButton;
-@property (strong, nonatomic) IBOutlet UIButton *settingsButton;
+@property (strong, nonatomic) IBOutlet UILabel *distLabel;
 
 @end
