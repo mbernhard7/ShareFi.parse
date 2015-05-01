@@ -1,27 +1,22 @@
 //
-//  setupViewController.m
+//  accountViewController.m
 //  ShareFi
 //
-//  Created by Miles Bernhard on 4/29/15.
+//  Created by Miles Bernhard on 4/30/15.
 //  Copyright (c) 2015 Miles Bernhard. All rights reserved.
 //
 
-#import "setupViewController.h"
+#import "accountViewController.h"
 
-@interface setupViewController ()
+@interface accountViewController ()
 
 @end
 
-@implementation setupViewController
+@implementation accountViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
@@ -31,6 +26,11 @@
         [self.view endEditing:YES];
     }
     [super touchesBegan:touches withEvent:event];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 /*

@@ -20,16 +20,23 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [Parse setApplicationId:@"Xw731Ft6PTBw357LUQQFDqn3pwrNwVLl75zssVao"
                   clientKey:@"AwrOoQ3u09InYZKaYGudzJPrHwCoabR7ECnmFed7"];
-    
-    // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     PFACL *defaultACL = [PFACL ACL];
     [defaultACL setPublicReadAccess:YES];
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
-    if (![PFUser currentUser]) {
-        
-        return YES;
-    
+    if ([PFUser currentUser]) {
+    PFQuery *Query = [PFQuery queryWithClassName:@"networks"];
+    [Query whereKey:@"user" equalTo:[[PFUser currentUser]objectForKey:@"username"]];
+    [Query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        if(object){
+            if([[object objectForKey:@"flagged"] isEqual:@YES]){
+                [[PFUser currentUser] setObject:@YES forKey:@"accessrevoked"];
+            }
+        }
+        else if(!(object)){
+            [[PFUser currentUser] setObject:@YES forKey:@"accessrevoked"];
+        }
+    }];
     }
     return YES;
 }

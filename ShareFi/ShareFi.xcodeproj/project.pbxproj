@@ -44,9 +44,15 @@
 		F40C4B831AF07203004199B3 /* SignUpFieldBG.png in Resources */ = {isa = PBXBuildFile; fileRef = F40C4B721AF07203004199B3 /* SignUpFieldBG.png */; };
 		F40C4B841AF07203004199B3 /* Twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = F40C4B731AF07203004199B3 /* Twitter.png */; };
 		F40C4B851AF07203004199B3 /* TwitterDown.png in Resources */ = {isa = PBXBuildFile; fileRef = F40C4B741AF07203004199B3 /* TwitterDown.png */; };
+		F41D246E1AF2B444007ADE6D /* forgotPassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F41D246D1AF2B444007ADE6D /* forgotPassViewController.m */; };
+		F41D24711AF2C0E0007ADE6D /* addwifiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F41D24701AF2C0E0007ADE6D /* addwifiViewController.m */; };
+		F41D24741AF2C0EC007ADE6D /* accountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F41D24731AF2C0EC007ADE6D /* accountViewController.m */; };
+		F41D24771AF2C0FA007ADE6D /* aboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F41D24761AF2C0FA007ADE6D /* aboutViewController.m */; };
 		F4B6D2651AF1C7300057F640 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B6D2641AF1C7300057F640 /* LogInViewController.m */; };
 		F4B6D2681AF1C7440057F640 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B6D2671AF1C7440057F640 /* SignUpViewController.m */; };
 		F4B6D26B1AF1CB320057F640 /* setupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B6D26A1AF1CB320057F640 /* setupViewController.m */; };
+		F4D54BCE1AF3134F009BCDC5 /* tableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D54BCD1AF3134F009BCDC5 /* tableViewController.m */; };
+		F4EBD2961AF31CCE00C90C24 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EBD2951AF31CCE00C90C24 /* CustomTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,12 +109,24 @@
 		F40C4B721AF07203004199B3 /* SignUpFieldBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignUpFieldBG.png; sourceTree = "<group>"; };
 		F40C4B731AF07203004199B3 /* Twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Twitter.png; sourceTree = "<group>"; };
 		F40C4B741AF07203004199B3 /* TwitterDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwitterDown.png; sourceTree = "<group>"; };
+		F41D246C1AF2B444007ADE6D /* forgotPassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = forgotPassViewController.h; sourceTree = "<group>"; };
+		F41D246D1AF2B444007ADE6D /* forgotPassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = forgotPassViewController.m; sourceTree = "<group>"; };
+		F41D246F1AF2C0E0007ADE6D /* addwifiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addwifiViewController.h; sourceTree = "<group>"; };
+		F41D24701AF2C0E0007ADE6D /* addwifiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addwifiViewController.m; sourceTree = "<group>"; };
+		F41D24721AF2C0EC007ADE6D /* accountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = accountViewController.h; sourceTree = "<group>"; };
+		F41D24731AF2C0EC007ADE6D /* accountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = accountViewController.m; sourceTree = "<group>"; };
+		F41D24751AF2C0FA007ADE6D /* aboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aboutViewController.h; sourceTree = "<group>"; };
+		F41D24761AF2C0FA007ADE6D /* aboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aboutViewController.m; sourceTree = "<group>"; };
 		F4B6D2631AF1C7300057F640 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
 		F4B6D2641AF1C7300057F640 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
 		F4B6D2661AF1C7440057F640 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		F4B6D2671AF1C7440057F640 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		F4B6D2691AF1CB320057F640 /* setupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = setupViewController.h; sourceTree = "<group>"; };
 		F4B6D26A1AF1CB320057F640 /* setupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = setupViewController.m; sourceTree = "<group>"; };
+		F4D54BCC1AF3134F009BCDC5 /* tableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tableViewController.h; path = ../tableViewController.h; sourceTree = "<group>"; };
+		F4D54BCD1AF3134F009BCDC5 /* tableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = tableViewController.m; path = ../tableViewController.m; sourceTree = "<group>"; };
+		F4EBD2941AF31CCE00C90C24 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		F4EBD2951AF31CCE00C90C24 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +184,16 @@
 			isa = PBXGroup;
 			children = (
 				F40C4B261AF06568004199B3 /* Main.storyboard */,
+				F4D54BCC1AF3134F009BCDC5 /* tableViewController.h */,
+				F4D54BCD1AF3134F009BCDC5 /* tableViewController.m */,
+				F4EBD2941AF31CCE00C90C24 /* CustomTableViewCell.h */,
+				F4EBD2951AF31CCE00C90C24 /* CustomTableViewCell.m */,
+				F41D246F1AF2C0E0007ADE6D /* addwifiViewController.h */,
+				F41D24701AF2C0E0007ADE6D /* addwifiViewController.m */,
+				F41D24721AF2C0EC007ADE6D /* accountViewController.h */,
+				F41D24731AF2C0EC007ADE6D /* accountViewController.m */,
+				F41D24751AF2C0FA007ADE6D /* aboutViewController.h */,
+				F41D24761AF2C0FA007ADE6D /* aboutViewController.m */,
 				F40C4B201AF06568004199B3 /* AppDelegate.h */,
 				F40C4B211AF06568004199B3 /* AppDelegate.m */,
 				F40C4B231AF06568004199B3 /* ViewController.h */,
@@ -176,6 +204,8 @@
 				F4B6D2641AF1C7300057F640 /* LogInViewController.m */,
 				F4B6D2661AF1C7440057F640 /* SignUpViewController.h */,
 				F4B6D2671AF1C7440057F640 /* SignUpViewController.m */,
+				F41D246C1AF2B444007ADE6D /* forgotPassViewController.h */,
+				F41D246D1AF2B444007ADE6D /* forgotPassViewController.m */,
 				F40C4B291AF06568004199B3 /* Images.xcassets */,
 				F40C4B2B1AF06568004199B3 /* LaunchScreen.xib */,
 				F40C4B1C1AF06568004199B3 /* Supporting Files */,
@@ -372,11 +402,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F40C4B251AF06568004199B3 /* ViewController.m in Sources */,
+				F41D24711AF2C0E0007ADE6D /* addwifiViewController.m in Sources */,
+				F4EBD2961AF31CCE00C90C24 /* CustomTableViewCell.m in Sources */,
 				F4B6D2651AF1C7300057F640 /* LogInViewController.m in Sources */,
 				F40C4B221AF06568004199B3 /* AppDelegate.m in Sources */,
 				F4B6D2681AF1C7440057F640 /* SignUpViewController.m in Sources */,
 				F4B6D26B1AF1CB320057F640 /* setupViewController.m in Sources */,
+				F4D54BCE1AF3134F009BCDC5 /* tableViewController.m in Sources */,
+				F41D24741AF2C0EC007ADE6D /* accountViewController.m in Sources */,
 				F40C4B1F1AF06568004199B3 /* main.m in Sources */,
+				F41D24771AF2C0FA007ADE6D /* aboutViewController.m in Sources */,
+				F41D246E1AF2B444007ADE6D /* forgotPassViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +546,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = ShareFi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -525,6 +562,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = ShareFi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

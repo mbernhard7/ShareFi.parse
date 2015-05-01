@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface ViewController ()
 
@@ -34,7 +35,19 @@
     [PFUser logOut];
     [self presentlogin];
 }
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    UITouch *touch = [[event allTouches] anyObject];
+    
+    if (![[touch view] isKindOfClass:[UITextField class]]) {
+        [self.view endEditing:YES];
+    }
+    [super touchesBegan:touches withEvent:event];
+}
 
+-(IBAction)findnearbyButton:(id)sender{
+    
+   }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

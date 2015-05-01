@@ -1,19 +1,18 @@
 //
-//  SignUpViewController.m
+//  aboutViewController.m
 //  ShareFi
 //
-//  Created by Miles Bernhard on 4/29/15.
+//  Created by Miles Bernhard on 4/30/15.
 //  Copyright (c) 2015 Miles Bernhard. All rights reserved.
 //
 
-#import "SignUpViewController.h"
-#import <Parse/Parse.h>
+#import "aboutViewController.h"
 
-@interface SignUpViewController ()
+@interface aboutViewController ()
 
 @end
 
-@implementation SignUpViewController
+@implementation aboutViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,24 +22,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
--(IBAction)signup:(id)sender {
-    PFUser *user = [PFUser user];
-    user.username = _usernameText.text;
-    user.password = _passwordText.text;
-    user.email = _emailText.text;
-    [user setObject:@YES forKey:@"accessrevoked"];
-    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (!error) {
-            //The registration was successful, go to the wall
-            [self performSegueWithIdentifier:@"signtomain" sender:self];
-             }
-        else{
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:[NSString stringWithFormat:@"%@",error.description] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            [alert show];
-
-        }
-    }];
 }
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     

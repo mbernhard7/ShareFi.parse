@@ -12,6 +12,7 @@
 @interface ViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *logOut;
+@property (nonatomic, strong) CLLocationManager *locationManager;
 
 @end
 

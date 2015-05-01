@@ -33,12 +33,22 @@ NSString *password = _passText.text;
                                         
                                         [self performSegueWithIdentifier:@"logtomain" sender:self];
                                     } else {
-                                        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Login Error" message:@"Credentials provided were incorrect. Please try again." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:[NSString stringWithFormat:@"%@",error.description] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                                         [alert show];
                                         
                                     }
                                 }];
 }
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    UITouch *touch = [[event allTouches] anyObject];
+    
+    if (![[touch view] isKindOfClass:[UITextField class]]) {
+        [self.view endEditing:YES];
+    }
+    [super touchesBegan:touches withEvent:event];
+}
+
 /*
 #pragma mark - Navigation
 
