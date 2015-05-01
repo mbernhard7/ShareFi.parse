@@ -8,6 +8,7 @@
 
 #import "CustomTableViewCell.h"
 #import "tableViewController.h"
+#import <Parse/Parse.h>
 
 @implementation CustomTableViewCell
 @synthesize ssidLabel = _ssidLabel;
@@ -21,6 +22,7 @@
 - (IBAction)mapsButton:(id)sender {
   
 }
+
 
 - (void)awakeFromNib {
     // Initialization code

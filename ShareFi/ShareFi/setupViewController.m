@@ -7,6 +7,7 @@
 //
 
 #import "setupViewController.h"
+#import <Parse/Parse.h>
 
 @interface setupViewController ()
 
@@ -15,10 +16,19 @@
 @implementation setupViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+-(void) viewDidAppear:(BOOL)animated{
+    if ([PFUser currentUser]) {
+        [self performSegueWithIdentifier:@"setuptomain" sender:self];
+    }
+    else
+    {
+    }
 
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -33,6 +43,8 @@
     [super touchesBegan:touches withEvent:event];
 }
 
+- (void) presentlogin{
+}
 /*
 #pragma mark - Navigation
 

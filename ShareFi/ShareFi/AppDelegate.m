@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import "Reachability.h"
 
 @interface AppDelegate ()
 

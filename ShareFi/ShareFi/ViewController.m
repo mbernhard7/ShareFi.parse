@@ -18,23 +18,31 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+       [super viewDidLoad];
 }
 - (void) viewDidAppear:(BOOL)animated {
-    [self presentlogin];
-}
-- (void) presentlogin{
-    if (![PFUser currentUser]) {
-        [self performSegueWithIdentifier:@"maintosetup" sender:self];
+    self.locationManager = [[CLLocationManager alloc]init];
+    CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
+    if (status == kCLAuthorizationStatusNotDetermined) {
+        [self.locationManager requestAlwaysAuthorization];
     }
-    else
-    {
+    self.locationManager.distanceFilter = kCLDistanceFilterNone;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [self.locationManager startUpdatingLocation];
+
+}
+- (IBAction)find:(id)sender {
+    CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
+    if ([CLLocationManager locationServicesEnabled]&&(status!=kCLAuthorizationStatusNotDetermined)&&(status!=kCLAuthorizationStatusDenied)) {
+        [self performSegueWithIdentifier:@"findtotable" sender:self];
+    }
+    else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Cannot determine location. Make sure location services are enabled. Also, go to Settings>Privacy>Location Services>ShareFi and make sure it's set to always." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+
     }
 }
-- (IBAction)logOut:(id)sender {
-    [PFUser logOut];
-    [self presentlogin];
-}
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
     UITouch *touch = [[event allTouches] anyObject];
@@ -45,9 +53,7 @@
     [super touchesBegan:touches withEvent:event];
 }
 
--(IBAction)findnearbyButton:(id)sender{
-    
-   }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

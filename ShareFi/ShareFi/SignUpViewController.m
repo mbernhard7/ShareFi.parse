@@ -32,8 +32,7 @@
     [user setObject:@YES forKey:@"accessrevoked"];
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
-            //The registration was successful, go to the wall
-            [self performSegueWithIdentifier:@"signtomain" sender:self];
+            [self performSegueWithIdentifier:@"signtotab" sender:self];
              }
         else{
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:[NSString stringWithFormat:@"%@",error.description] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];

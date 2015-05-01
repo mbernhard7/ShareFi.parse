@@ -27,12 +27,14 @@
 - (IBAction)login:(id)sender {
 NSString *username = _usernameText.text;
 NSString *password = _passText.text;
+[_loading startAnimating];
 [PFUser logInWithUsernameInBackground:username password:password
                                 block:^(PFUser *user, NSError *error) {
                                     if (user) {
-                                        
-                                        [self performSegueWithIdentifier:@"logtomain" sender:self];
+                                        [_loading stopAnimating];
+                                        [self performSegueWithIdentifier:@"logtotab" sender:self];
                                     } else {
+                                        [_loading stopAnimating];
                                         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:[NSString stringWithFormat:@"%@",error.description] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                                         [alert show];
                                         

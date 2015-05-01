@@ -13,5 +13,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *usernameText;
 @property (strong, nonatomic) IBOutlet UITextField *passText;
 @property (strong, nonatomic) IBOutlet UIButton *loginButton;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *loading;
 
 @end

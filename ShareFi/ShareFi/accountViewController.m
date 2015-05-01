@@ -7,6 +7,7 @@
 //
 
 #import "accountViewController.h"
+#import <Parse/Parse.h>
 
 @interface accountViewController ()
 
@@ -26,6 +27,10 @@
         [self.view endEditing:YES];
     }
     [super touchesBegan:touches withEvent:event];
+}
+- (IBAction)logout:(id)sender {
+    [PFUser logOut];
+    [self performSegueWithIdentifier:@"logout" sender:self];
 }
 
 - (void)didReceiveMemoryWarning {

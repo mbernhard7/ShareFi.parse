@@ -30,8 +30,7 @@
     [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
         if(object){
     [PFUser requestPasswordResetForEmailInBackground:_emailText.text];
-    [self performSegueWithIdentifier:@"forgottologin" sender:self];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Password Reset" message:@"Password reset requested. Please check your email to reset your password." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success!" message:@"Password reset requested. Please check your email to reset your password." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
         }
         else {

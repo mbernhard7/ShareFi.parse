@@ -17,10 +17,16 @@
 @implementation tableViewController
 
 - (void)viewDidLoad {
+    UIBarButtonItem *back = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(backButton:)];
+    self.navigationController.topViewController.navigationItem.rightBarButtonItem = back;
+    back.enabled=TRUE;
+    back.style=UIBarButtonItemStyleDone;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
-
+-(void)backButton:(id)sender{
+    [self performSegueWithIdentifier:@"tableback" sender:self];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -39,7 +45,7 @@
         self.pullToRefreshEnabled = YES;
         
         // Whether the built-in pagination is enabled
-        self.paginationEnabled = YES;
+        self.paginationEnabled = NO;
     }
     return self;
 }

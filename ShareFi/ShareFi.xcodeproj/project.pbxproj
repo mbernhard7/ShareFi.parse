@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F409BFD01AF40819002992C3 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F409BFCF1AF40819002992C3 /* Reachability.m */; };
 		F40C4B1F1AF06568004199B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F40C4B1E1AF06568004199B3 /* main.m */; };
 		F40C4B221AF06568004199B3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F40C4B211AF06568004199B3 /* AppDelegate.m */; };
 		F40C4B251AF06568004199B3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F40C4B241AF06568004199B3 /* ViewController.m */; };
@@ -66,6 +67,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F409BFCE1AF40819002992C3 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		F409BFCF1AF40819002992C3 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		F40C4B191AF06568004199B3 /* ShareFi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareFi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F40C4B1D1AF06568004199B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F40C4B1E1AF06568004199B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -184,6 +187,18 @@
 			isa = PBXGroup;
 			children = (
 				F40C4B261AF06568004199B3 /* Main.storyboard */,
+				F40C4B201AF06568004199B3 /* AppDelegate.h */,
+				F40C4B211AF06568004199B3 /* AppDelegate.m */,
+				F4B6D2691AF1CB320057F640 /* setupViewController.h */,
+				F4B6D26A1AF1CB320057F640 /* setupViewController.m */,
+				F4B6D2661AF1C7440057F640 /* SignUpViewController.h */,
+				F4B6D2671AF1C7440057F640 /* SignUpViewController.m */,
+				F4B6D2631AF1C7300057F640 /* LogInViewController.h */,
+				F4B6D2641AF1C7300057F640 /* LogInViewController.m */,
+				F41D246C1AF2B444007ADE6D /* forgotPassViewController.h */,
+				F41D246D1AF2B444007ADE6D /* forgotPassViewController.m */,
+				F40C4B231AF06568004199B3 /* ViewController.h */,
+				F40C4B241AF06568004199B3 /* ViewController.m */,
 				F4D54BCC1AF3134F009BCDC5 /* tableViewController.h */,
 				F4D54BCD1AF3134F009BCDC5 /* tableViewController.m */,
 				F4EBD2941AF31CCE00C90C24 /* CustomTableViewCell.h */,
@@ -194,18 +209,8 @@
 				F41D24731AF2C0EC007ADE6D /* accountViewController.m */,
 				F41D24751AF2C0FA007ADE6D /* aboutViewController.h */,
 				F41D24761AF2C0FA007ADE6D /* aboutViewController.m */,
-				F40C4B201AF06568004199B3 /* AppDelegate.h */,
-				F40C4B211AF06568004199B3 /* AppDelegate.m */,
-				F40C4B231AF06568004199B3 /* ViewController.h */,
-				F40C4B241AF06568004199B3 /* ViewController.m */,
-				F4B6D2691AF1CB320057F640 /* setupViewController.h */,
-				F4B6D26A1AF1CB320057F640 /* setupViewController.m */,
-				F4B6D2631AF1C7300057F640 /* LogInViewController.h */,
-				F4B6D2641AF1C7300057F640 /* LogInViewController.m */,
-				F4B6D2661AF1C7440057F640 /* SignUpViewController.h */,
-				F4B6D2671AF1C7440057F640 /* SignUpViewController.m */,
-				F41D246C1AF2B444007ADE6D /* forgotPassViewController.h */,
-				F41D246D1AF2B444007ADE6D /* forgotPassViewController.m */,
+				F409BFCE1AF40819002992C3 /* Reachability.h */,
+				F409BFCF1AF40819002992C3 /* Reachability.m */,
 				F40C4B291AF06568004199B3 /* Images.xcassets */,
 				F40C4B2B1AF06568004199B3 /* LaunchScreen.xib */,
 				F40C4B1C1AF06568004199B3 /* Supporting Files */,
@@ -401,6 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F409BFD01AF40819002992C3 /* Reachability.m in Sources */,
 				F40C4B251AF06568004199B3 /* ViewController.m in Sources */,
 				F41D24711AF2C0E0007ADE6D /* addwifiViewController.m in Sources */,
 				F4EBD2961AF31CCE00C90C24 /* CustomTableViewCell.m in Sources */,
