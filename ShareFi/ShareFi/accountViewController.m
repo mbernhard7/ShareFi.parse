@@ -2,7 +2,7 @@
 //  accountViewController.m
 //  ShareFi
 //
-//  Created by Miles Bernhard on 4/30/15.
+//  Created by Miles Bernhard on 5/1/15.
 //  Copyright (c) 2015 Miles Bernhard. All rights reserved.
 //
 
@@ -14,25 +14,48 @@
 @end
 
 @implementation accountViewController
-
+-(IBAction)refresh:(id)sender{
+    [self viewDidAppear:YES];
+}
 - (void)viewDidLoad {
+    _username.text=[NSString stringWithFormat:@"Username: %@",[[PFUser currentUser] objectForKey:@"username"]];
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    
-    UITouch *touch = [[event allTouches] anyObject];
-    
-    if (![[touch view] isKindOfClass:[UITextField class]]) {
-        [self.view endEditing:YES];
+    _email.text=[NSString stringWithFormat:@"Email: %@",[[PFUser currentUser] objectForKey:@"email"]];
+    if ([[[PFUser currentUser] objectForKey: @"access"] isEqual:@NO]) {
+        _access.text=@"Access: NO";
     }
-    [super touchesBegan:touches withEvent:event];
-}
-- (IBAction)logout:(id)sender {
-    [PFUser logOut];
-    [self performSegueWithIdentifier:@"logout" sender:self];
+    else {
+        _access.text=@"Access: YES";
+    }
+    PFQuery *query = [PFQuery queryWithClassName:@"networks"];
+    [query whereKey:@"user" equalTo:[[PFUser currentUser] objectForKey:@"username"]];
+    [query countObjectsInBackgroundWithBlock:^(int number, NSError *error){
+        if (number) {
+            _networks.text=[NSString stringWithFormat:@"Networks: %d",number];
+        }
+
+    }];
+    UIBarButtonItem *logout = [[UIBarButtonItem alloc]
+                                   initWithTitle:@"Logout"
+                                   style:UIBarButtonItemStyleDone
+                                   target:self
+                                   action:@selector(logout:)];
+    self.navigationItem.rightBarButtonItem = logout;
+    [super viewDidLoad];
+
 }
 
+-(IBAction)logout:(id)sender{
+    [PFUser logOut];
+    [self performSegueWithIdentifier:@"accountlogout" sender:self];
+}
+- (IBAction)changepass:(id)sender {
+    [PFUser requestPasswordResetForEmailInBackground:[[PFUser currentUser] objectForKey:@"email"]];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success!" message:@"Password reset requested. Please check your email to reset your password." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
+    [PFUser logOut];
+    [self performSegueWithIdentifier:@"accountlogout" sender:self];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

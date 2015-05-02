@@ -29,7 +29,7 @@
     user.username = _usernameText.text;
     user.password = _passwordText.text;
     user.email = _emailText.text;
-    [user setObject:@YES forKey:@"accessrevoked"];
+    [[PFUser currentUser] setObject:[NSNumber numberWithBool:NO] forKey:@"access"];
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
             [self performSegueWithIdentifier:@"signtotab" sender:self];

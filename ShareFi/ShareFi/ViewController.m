@@ -32,6 +32,7 @@
 
 }
 - (IBAction)find:(id)sender {
+     if ([[[PFUser currentUser] objectForKey: @"access"] isEqual:@YES]) {
     CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
     if ([CLLocationManager locationServicesEnabled]&&(status!=kCLAuthorizationStatusNotDetermined)&&(status!=kCLAuthorizationStatusDenied)) {
         [self performSegueWithIdentifier:@"findtotable" sender:self];
@@ -41,6 +42,12 @@
         [alert show];
 
     }
+     }
+     else{
+         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Access Denied" message:@"Your account is not approved for access. Either one of your wifi networks has been flagged as 'not working', or you are yet to add a network. Visit the 'Account' tab to edit a network, or visit the 'Add WiFi' to add a network." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+         [alert show];
+
+     }
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {

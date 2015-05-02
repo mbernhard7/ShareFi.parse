@@ -27,6 +27,7 @@
     // Do any additional setup after loading the view.
 }
 
+
 - (void) viewDidAppear:(BOOL)animated {
     Reachability *reachability = [Reachability reachabilityWithHostname:@"www.google.com"];
     reachability.reachableOnWWAN = NO;
@@ -76,14 +77,16 @@
                 network[@"user"] = [[PFUser currentUser] objectForKey:@"username"];
                 network[@"ssid"] = _ssidInput.text;
                 network[@"pass"] = _passInput.text;
-                network[@"flagged"]= @NO;
+                [network setObject:[NSNumber numberWithBool:NO] forKey:@"flagged"];
                 network[@"location"]=point;
                 [network saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                     if (succeeded) {
                         [self.view endEditing:YES];
                         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success!" message:@"The network has been added. You can delete this network from the 'Account' tab. If this network is flagged as not working, your access will be revoked until you adjust it." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                         [alert show];
-                        [[PFUser currentUser] setObject:@NO forKey:@"accessrevoked"];
+                        PFUser *log = [PFUser currentUser];
+                         log[@"access"] = @YES;
+                         [log saveInBackground];
                         
                     }
                     else {

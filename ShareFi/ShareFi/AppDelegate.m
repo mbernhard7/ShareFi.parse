@@ -24,18 +24,29 @@
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     PFACL *defaultACL = [PFACL ACL];
     [defaultACL setPublicReadAccess:YES];
+    [defaultACL setPublicWriteAccess:YES];
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
     if ([PFUser currentUser]) {
     PFQuery *Query = [PFQuery queryWithClassName:@"networks"];
     [Query whereKey:@"user" equalTo:[[PFUser currentUser]objectForKey:@"username"]];
     [Query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
         if(object){
-            if([[object objectForKey:@"flagged"] isEqual:@YES]){
-                [[PFUser currentUser] setObject:@YES forKey:@"accessrevoked"];
+            if([object objectForKey:@"flagged"]==NO){
+                PFUser *log = [PFUser currentUser];
+                log[@"access"] = @YES;
+                [log saveInBackground];
+             
+            }
+            else{
+                PFUser *log = [PFUser currentUser];
+                log[@"access"] = @NO;
+                [log saveInBackground];
             }
         }
         else if(!(object)){
-            [[PFUser currentUser] setObject:@YES forKey:@"accessrevoked"];
+            PFUser *log = [PFUser currentUser];
+            log[@"access"] = @NO;
+            [log saveInBackground];
         }
     }];
     }

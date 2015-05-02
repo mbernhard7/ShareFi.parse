@@ -31,6 +31,28 @@ NSString *password = _passText.text;
 [PFUser logInWithUsernameInBackground:username password:password
                                 block:^(PFUser *user, NSError *error) {
                                     if (user) {
+                                        PFQuery *Query = [PFQuery queryWithClassName:@"networks"];
+                                        [Query whereKey:@"user" equalTo:[[PFUser currentUser]objectForKey:@"username"]];
+                                        [Query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+                                            if(object){
+                                                if([object objectForKey:@"flagged"]==NO){
+                                                    PFUser *log = [PFUser currentUser];
+                                                    log[@"access"] = @YES;
+                                                    [log saveInBackground];
+                                                }
+                                                else{
+                                                    PFUser *log = [PFUser currentUser];
+                                                    log[@"access"] = @NO;
+                                                    [log saveInBackground];
+                                                }
+                                            }
+                                            else if(!(object)){
+                                                PFUser *log = [PFUser currentUser];
+                                                log[@"access"] = @NO;
+                                                [log saveInBackground];
+                                            }
+                                        }];
+
                                         [_loading stopAnimating];
                                         [self performSegueWithIdentifier:@"logtotab" sender:self];
                                     } else {
