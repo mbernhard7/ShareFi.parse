@@ -16,6 +16,9 @@
 @implementation mynetworksViewController
 
 - (void)viewDidLoad {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+     selector:@selector(refreshtable:)
+     name:@"refreshtable" object:nil];
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
 
     [super viewDidLoad];
@@ -64,6 +67,9 @@
     cell.password.text =[object objectForKey:@"pass"];
         return cell;
 }
+- (void)refreshtable:(UITableView *)tableView{
+    [self loadObjects];
+}
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
                            PFObject *object = [self.objects objectAtIndex:indexPath.row];
@@ -71,10 +77,15 @@
                         if (succeeded) {
                             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Network removed. In order to have access to the find network feature, you must have at least one working network." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                             [alert show];
+                            [[NSNotificationCenter defaultCenter] postNotificationName:@"refreshaccess" object:nil];
 
                         }
                         else{
-                            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:[NSString stringWithFormat:(@"%@",error.localizedDescription)] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                            UIAlertView *alert = [[UIAlertView alloc]
+                                                  initWithTitle:@"Error"
+                                                  message:@"error deleting the network. Please try again."
+                                                  delegate:nil
+                                                  cancelButtonTitle:@"OK" otherButtonTitles:nil];
                             [alert show];
 
                         }

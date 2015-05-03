@@ -80,10 +80,11 @@
     cell.passLabel.text =[object objectForKey:@"pass"];
     if (distance<1) {
         distance=(distance*5280);
-    cell.distLabel.text =[NSString stringWithFormat:@"%g feet",distance];
+    
+    cell.distLabel.text =[NSString stringWithFormat:@"%d feet",(int)distance];
     }
     else{
-        cell.distLabel.text =[NSString stringWithFormat:@"%g miles",distance];
+        cell.distLabel.text =[NSString stringWithFormat:@"%.2f miles",distance];
     }
     return cell;
 }

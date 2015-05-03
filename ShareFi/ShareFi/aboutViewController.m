@@ -15,6 +15,7 @@
 @implementation aboutViewController
 
 - (void)viewDidLoad {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"refreshaccess" object:nil];
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }

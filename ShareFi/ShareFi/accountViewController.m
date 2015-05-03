@@ -15,11 +15,27 @@
 
 @implementation accountViewController
 -(IBAction)refresh:(id)sender{
-    [self viewDidAppear:YES];
+    _username.text=[NSString stringWithFormat:@"Username: %@",[[PFUser currentUser] objectForKey:@"username"]];
+    _email.text=[NSString stringWithFormat:@"Email: %@",[[PFUser currentUser] objectForKey:@"email"]];
+    if ([[[PFUser currentUser] objectForKey: @"access"] isEqual:@NO]) {
+        _access.text=@"Access: NO";
+    }
+    else {
+        _access.text=@"Access: YES";
+    }
+    PFQuery *query = [PFQuery queryWithClassName:@"networks"];
+    [query whereKey:@"user" equalTo:[[PFUser currentUser] objectForKey:@"username"]];
+    [query countObjectsInBackgroundWithBlock:^(int number, NSError *error){
+        if (number) {
+            _networks.text=[NSString stringWithFormat:@"Networks: %d",number];
+        }
+        
+    }];
+
 }
 - (void)viewDidLoad {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"refreshaccess" object:nil];
     _username.text=[NSString stringWithFormat:@"Username: %@",[[PFUser currentUser] objectForKey:@"username"]];
-    [super viewDidLoad];
     _email.text=[NSString stringWithFormat:@"Email: %@",[[PFUser currentUser] objectForKey:@"email"]];
     if ([[[PFUser currentUser] objectForKey: @"access"] isEqual:@NO]) {
         _access.text=@"Access: NO";

@@ -286,13 +286,19 @@
                                     <navigationItem title="Add WiFi" id="dkV-XW-65N"/>
                                 </items>
                             </navigationBar>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Ujw-ZO-feV">
+                                <rect key="frame" x="282" y="244" width="37" height="37"/>
+                                <color key="color" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="b9A-z9-cSd" firstAttribute="top" secondItem="0f8-k3-5CG" secondAttribute="bottom" constant="8" symbolic="YES" id="2jf-k4-E5g"/>
                             <constraint firstItem="0f8-k3-5CG" firstAttribute="top" secondItem="XZs-eJ-F2M" secondAttribute="bottom" constant="8" symbolic="YES" id="CtY-cW-LIa"/>
                             <constraint firstItem="0f8-k3-5CG" firstAttribute="leading" secondItem="YNg-lX-NiK" secondAttribute="leading" id="ECQ-8H-pEp"/>
+                            <constraint firstItem="YNg-lX-NiK" firstAttribute="top" secondItem="Ujw-ZO-feV" secondAttribute="bottom" constant="25" id="IBU-4g-Sma"/>
                             <constraint firstItem="YNg-lX-NiK" firstAttribute="top" secondItem="b9A-z9-cSd" secondAttribute="bottom" constant="3" id="Ila-Tp-EsY"/>
+                            <constraint firstAttribute="centerX" secondItem="Ujw-ZO-feV" secondAttribute="centerX" constant="-0.5" id="PgH-UT-BSB"/>
                             <constraint firstItem="aWa-zP-CUz" firstAttribute="top" secondItem="adj-9Q-uzH" secondAttribute="bottom" id="RNK-H9-pxo"/>
                             <constraint firstItem="uC7-id-aWU" firstAttribute="centerX" secondItem="Xck-5P-hXa" secondAttribute="centerX" id="SGW-V1-Gu3"/>
                             <constraint firstItem="aWa-zP-CUz" firstAttribute="leading" secondItem="Xck-5P-hXa" secondAttribute="leading" id="YV2-op-ySp"/>
@@ -307,6 +313,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Add WiFi" id="cMY-Yi-VeD"/>
                     <connections>
+                        <outlet property="loading" destination="Ujw-ZO-feV" id="phv-WM-Ec8"/>
                         <outlet property="passInput" destination="YNg-lX-NiK" id="zSi-Yj-u0h"/>
                         <outlet property="ssidInput" destination="0f8-k3-5CG" id="yW8-JN-zgO"/>
                     </connections>

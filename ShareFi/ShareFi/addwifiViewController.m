@@ -23,6 +23,7 @@
     NSLog(@"%@",error);
 }
 - (void)viewDidLoad {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"refreshaccess" object:nil];
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
@@ -63,8 +64,24 @@
 - (IBAction)submitwifiButton:(id)sender {
     CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
     if ([CLLocationManager locationServicesEnabled]&&(status!=kCLAuthorizationStatusNotDetermined)&&(status!=kCLAuthorizationStatusDenied)) {
-    
-    Reachability *reachability = [Reachability reachabilityWithHostname:@"www.google.com"];
+        self.locationManager = [[CLLocationManager alloc]init];
+        self.locationManager.distanceFilter = kCLDistanceFilterNone;
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        [self.locationManager startUpdatingLocation];
+        [_loading startAnimating];
+        [self performSelectorInBackground:@selector(waitforacc) withObject:self];
+        
+    }
+    else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Cannot determine location. Make sure location services are enabled. Also, go to Settings>Privacy>Location Services>ShareFi and make sure it's set to always." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+        
+    }
+
+}
+-(void)continuesubmitting{
+    [_loading stopAnimating];
+         Reachability *reachability = [Reachability reachabilityWithHostname:@"www.google.com"];
     reachability.reachableOnWWAN = NO;
     if ([reachability isReachable]) {
         CFArrayRef myArray = CNCopySupportedInterfaces();
@@ -84,9 +101,7 @@
                         [self.view endEditing:YES];
                         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success!" message:@"The network has been added. You can delete this network from the 'Account' tab. If this network is flagged as not working, your access will be revoked until you adjust it." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                         [alert show];
-                        PFUser *log = [PFUser currentUser];
-                         log[@"access"] = @YES;
-                         [log saveInBackground];
+                        [[NSNotificationCenter defaultCenter] postNotificationName:@"refreshaccess" object:nil];
                         
                     }
                     else {
@@ -115,14 +130,40 @@
         
     }
     }
-    else{
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Cannot determine location. Make sure location services are enabled. Also, go to Settings>Privacy>Location Services>ShareFi and make sure it's set to always." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
 
+-(void)waitforacc{
+    int times=0;
+    CLLocationAccuracy accuracy = self.locationManager.location.horizontalAccuracy;
+    CLLocationAccuracy desiredAccuracy = 150;
+    if ((accuracy>desiredAccuracy)||(accuracy==0)) {
+    while ((accuracy>desiredAccuracy)||(accuracy==0)) {
+        times=times+1;
+        accuracy = self.locationManager.location.horizontalAccuracy;
+        if ((accuracy<=desiredAccuracy)&&(accuracy!=0)) {
+            times=0;
+            [self performSelectorOnMainThread:@selector(continuesubmitting) withObject:self waitUntilDone:NO];
+            break;
+        }
+        
+        if (times==15) {
+            times=0;
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Location information not accurate enough. Please try again and make sure WiFi is enabled." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+            [self performSelectorOnMainThread:@selector(stopanimating) withObject:self waitUntilDone:NO];
+            break;
+        }
+        sleep(1);
+    }
+    }
+    else {
+        
+    [self performSelectorOnMainThread:@selector(continuesubmitting) withObject:self waitUntilDone:NO];
     }
 
- }
-
+}
+-(void)stopanimating{
+    [_loading stopAnimating];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

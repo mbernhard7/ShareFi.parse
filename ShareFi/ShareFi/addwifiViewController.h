@@ -14,5 +14,6 @@
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (strong, nonatomic) IBOutlet UITextField *ssidInput;
 @property (strong, nonatomic) IBOutlet UITextField *passInput;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *loading;
 
 @end

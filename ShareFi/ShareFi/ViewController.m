@@ -18,6 +18,7 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"refreshaccess" object:nil];
        [super viewDidLoad];
 }
 - (void) viewDidAppear:(BOOL)animated {

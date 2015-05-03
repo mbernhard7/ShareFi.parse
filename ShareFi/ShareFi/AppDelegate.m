@@ -26,34 +26,45 @@
     [defaultACL setPublicReadAccess:YES];
     [defaultACL setPublicWriteAccess:YES];
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(refreshaccess)
+                                                 name:@"refreshaccess" object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"refreshaccess" object:nil];
+    return YES;
+}
+
+-(void)refreshaccess{
     if ([PFUser currentUser]) {
-    PFQuery *Query = [PFQuery queryWithClassName:@"networks"];
-    [Query whereKey:@"user" equalTo:[[PFUser currentUser]objectForKey:@"username"]];
-    [Query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
-        if(object){
-            if([object objectForKey:@"flagged"]==NO){
-                PFUser *log = [PFUser currentUser];
-                log[@"access"] = @YES;
-                [log saveInBackground];
-             
-            }
-            else{
+        PFQuery *Query = [PFQuery queryWithClassName:@"networks"];
+        [Query whereKey:@"user" equalTo:[[PFUser currentUser]objectForKey:@"username"]];
+        [Query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+            if(object){
+                    PFUser *log = [PFUser currentUser];
+                    log[@"access"] = @YES;
+                    [log saveInBackground];
+                    
+                }
+            else if(!(object)){
                 PFUser *log = [PFUser currentUser];
                 log[@"access"] = @NO;
                 [log saveInBackground];
             }
-        }
-        else if(!(object)){
-            PFUser *log = [PFUser currentUser];
-            log[@"access"] = @NO;
-            [log saveInBackground];
-        }
-    }];
+        }];
+        PFQuery *query = [PFQuery queryWithClassName:@"networks"];
+        [query whereKey:@"user" equalTo:[[PFUser currentUser]objectForKey:@"username"]];
+        [query whereKey:@"flagged" equalTo:@YES];
+        [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+            if(object){
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Network Flagged" message:@"One of your networks has been flagged as not working. Please visit the 'My Account' tab to resolve the issue." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
+                PFUser *log = [PFUser currentUser];
+                log[@"access"] = @NO;
+                [log saveInBackground];
+            }
+        }];
     }
-    return YES;
+
 }
-
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

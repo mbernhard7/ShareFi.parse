@@ -31,5 +31,43 @@
     [alertTextField setTextAlignment:NSTextAlignmentCenter];
     [alert show];
 }
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        NSString *newpass = [alertView textFieldAtIndex:0].text;
+        if (newpass.length>=6){
+            PFQuery *query = [PFQuery queryWithClassName:@"networks"];
+            [query whereKey:@"user" equalTo:[[PFUser currentUser] objectForKey:@"username"]];
+            [query whereKey:@"ssid" equalTo:_ssid.text];
+            [query whereKey:@"pass" equalTo:_password.text];
+            [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+                
+                object[@"pass"]=newpass;
+                
+            
+            [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                if (succeeded) {
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"WiFi password updated." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                    [alert show];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:@"refreshtable" object:nil];
+                }
+                else{
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Failed to update password. Please check your internet access and try again." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                    [alert show];
+
+                }
+            }];
+            }];
+          
+
+
+        }
+        else{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter a valid password." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+
+        }
+ 
+    }
+}
 
 @end
