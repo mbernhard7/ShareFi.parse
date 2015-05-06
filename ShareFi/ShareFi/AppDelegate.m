@@ -50,19 +50,7 @@
                 [log saveInBackground];
             }
         }];
-        PFQuery *query = [PFQuery queryWithClassName:@"networks"];
-        [query whereKey:@"user" equalTo:[[PFUser currentUser]objectForKey:@"username"]];
-        [query whereKey:@"flagged" equalTo:@YES];
-        [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
-            if(object){
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Network Flagged" message:@"One of your networks has been flagged as not working. Please visit the 'My Account' tab to resolve the issue." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-                [alert show];
-                PFUser *log = [PFUser currentUser];
-                log[@"access"] = @NO;
-                [log saveInBackground];
-            }
-        }];
-    }
+             }
 
 }
 

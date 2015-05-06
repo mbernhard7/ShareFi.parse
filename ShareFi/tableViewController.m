@@ -15,7 +15,6 @@
 @end
 
 @implementation tableViewController
-
 - (void)viewDidLoad {
     UIBarButtonItem *back = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(backButton:)];
     self.navigationController.topViewController.navigationItem.rightBarButtonItem = back;
@@ -75,7 +74,8 @@
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [self.locationManager startUpdatingLocation];
     PFGeoPoint *userGeoPoint = [PFGeoPoint geoPointWithLatitude:self.locationManager.location.coordinate.latitude longitude:self.locationManager.location.coordinate.longitude];
-    double distance =[[object objectForKey:@"location"]distanceInMilesTo:userGeoPoint];
+    cell.networkid = [object objectId];
+    double distance =[[object objectForKey:@"location"] distanceInMilesTo:userGeoPoint];
     cell.ssidLabel.text = [object objectForKey:@"ssid"];
     cell.passLabel.text =[object objectForKey:@"pass"];
     if (distance<1) {
@@ -85,6 +85,13 @@
     }
     else{
         cell.distLabel.text =[NSString stringWithFormat:@"%.2f miles",distance];
+    }
+    int success=[[object objectForKey:@"sumsuccess"]intValue];
+    int entries=[[object objectForKey:@"entries"]intValue];
+    int rate=success/entries;
+    cell.successLabel.text=[NSString stringWithFormat:@"%d%%",rate];
+    if ((success==0)&&(entries==0)) {
+    cell.successLabel.text=@"0%";
     }
     return cell;
 }

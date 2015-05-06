@@ -11,6 +11,7 @@
 @interface custom2TableViewCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UILabel *ssid;
 @property (strong, nonatomic) IBOutlet UILabel *password;
+@property (strong, nonatomic) IBOutlet NSString *networkid;
 
 
 @end

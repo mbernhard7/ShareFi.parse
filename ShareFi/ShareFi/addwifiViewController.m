@@ -94,12 +94,13 @@
                 network[@"user"] = [[PFUser currentUser] objectForKey:@"username"];
                 network[@"ssid"] = _ssidInput.text;
                 network[@"pass"] = _passInput.text;
-                [network setObject:[NSNumber numberWithBool:NO] forKey:@"flagged"];
+                network[@"entries"] = 0;
+                network[@"sumsuccess"] = 0;
                 network[@"location"]=point;
                 [network saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                     if (succeeded) {
                         [self.view endEditing:YES];
-                        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success!" message:@"The network has been added. You can delete this network from the 'Account' tab. If this network is flagged as not working, your access will be revoked until you adjust it." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success!" message:@"The network has been added. You can delete this network from the 'Account' tab." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                         [alert show];
                         [[NSNotificationCenter defaultCenter] postNotificationName:@"refreshaccess" object:nil];
                         

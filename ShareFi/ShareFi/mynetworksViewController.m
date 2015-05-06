@@ -65,6 +65,7 @@
     }
     cell.ssid.text = [object objectForKey:@"ssid"];
     cell.password.text =[object objectForKey:@"pass"];
+    cell.networkid=[object objectId];
         return cell;
 }
 - (void)refreshtable:(UITableView *)tableView{

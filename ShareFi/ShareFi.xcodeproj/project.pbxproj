@@ -51,6 +51,7 @@
 		F41D246E1AF2B444007ADE6D /* forgotPassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F41D246D1AF2B444007ADE6D /* forgotPassViewController.m */; };
 		F41D24711AF2C0E0007ADE6D /* addwifiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F41D24701AF2C0E0007ADE6D /* addwifiViewController.m */; };
 		F41D24771AF2C0FA007ADE6D /* aboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F41D24761AF2C0FA007ADE6D /* aboutViewController.m */; };
+		F47271561AF991E200B79D24 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47271551AF991E200B79D24 /* MapKit.framework */; };
 		F4B6D2651AF1C7300057F640 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B6D2641AF1C7300057F640 /* LogInViewController.m */; };
 		F4B6D2681AF1C7440057F640 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B6D2671AF1C7440057F640 /* SignUpViewController.m */; };
 		F4B6D26B1AF1CB320057F640 /* setupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B6D26A1AF1CB320057F640 /* setupViewController.m */; };
@@ -126,6 +127,7 @@
 		F41D24701AF2C0E0007ADE6D /* addwifiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addwifiViewController.m; sourceTree = "<group>"; };
 		F41D24751AF2C0FA007ADE6D /* aboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aboutViewController.h; sourceTree = "<group>"; };
 		F41D24761AF2C0FA007ADE6D /* aboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aboutViewController.m; sourceTree = "<group>"; };
+		F47271551AF991E200B79D24 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F4B6D2631AF1C7300057F640 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
 		F4B6D2641AF1C7300057F640 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
 		F4B6D2661AF1C7440057F640 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F47271561AF991E200B79D24 /* MapKit.framework in Frameworks */,
 				F40C4B5B1AF065FF004199B3 /* libsqlite3.dylib in Frameworks */,
 				F40C4B591AF065F4004199B3 /* libz.dylib in Frameworks */,
 				F40C4B571AF065EC004199B3 /* SystemConfiguration.framework in Frameworks */,
@@ -281,6 +284,7 @@
 		F40C4B8A1AF0959B004199B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F47271551AF991E200B79D24 /* MapKit.framework */,
 				F40C4B5A1AF065FF004199B3 /* libsqlite3.dylib */,
 				F40C4B581AF065F4004199B3 /* libz.dylib */,
 				F40C4B5C1AF06C15004199B3 /* Parse.framework */,

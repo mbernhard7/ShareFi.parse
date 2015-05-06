@@ -7,8 +7,8 @@
 //
 
 #import <Parse/Parse.h>
-
 @interface tableViewController : PFQueryTableViewController
 @property (nonatomic, strong) CLLocationManager *locationManager;
+
 
 @end

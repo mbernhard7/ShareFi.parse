@@ -13,6 +13,8 @@
 @implementation custom2TableViewCell
 @synthesize ssid = _ssid;
 @synthesize password = _password;
+@synthesize networkid = _networkid;
+
 
 
 - (void)awakeFromNib {
@@ -36,9 +38,7 @@
         NSString *newpass = [alertView textFieldAtIndex:0].text;
         if (newpass.length>=6){
             PFQuery *query = [PFQuery queryWithClassName:@"networks"];
-            [query whereKey:@"user" equalTo:[[PFUser currentUser] objectForKey:@"username"]];
-            [query whereKey:@"ssid" equalTo:_ssid.text];
-            [query whereKey:@"pass" equalTo:_password.text];
+            [query whereKey:@"objectId" equalTo:_networkid];
             [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
                 
                 object[@"pass"]=newpass;

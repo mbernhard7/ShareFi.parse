@@ -45,7 +45,7 @@
     }
      }
      else{
-         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Access Denied" message:@"Your account is not approved for access. Either one of your wifi networks has been flagged as 'not working', or you are yet to add a network. Visit the 'Account' tab to edit a network, or visit the 'Add WiFi' to add a network." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Access Denied" message:@"Your account is not approved for access. You must have at least one network added. Visit the 'Add WiFi' to add a network." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
          [alert show];
 
      }
